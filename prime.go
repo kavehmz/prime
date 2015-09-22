@@ -10,6 +10,9 @@ var p []uint64
 var mutex = &sync.Mutex{}
 
 func is_prime(n uint64) bool {
+	if n == 2 {
+		return true
+	}
 	if n%2 == 0 {
 		return false
 	}
