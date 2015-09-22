@@ -43,9 +43,9 @@ func Primes(max uint64) []uint64 {
 	runtime.GOMAXPROCS(runtime.NumCPU())
 	ready := make(chan bool, runtime.NumCPU())
 
-	for i := uint64(2); i <= max; i = i + 1000 {
-		if i+999 <= max {
-			go chk(i, i+999, ready)
+	for i := uint64(2); i <= max; i = i + 10000 {
+		if i+9999 <= max {
+			go chk(i, i+9999, ready)
 		} else {
 			go chk(i, max, ready)
 		}
