@@ -23,7 +23,7 @@ func Primes(max uint64) []uint64 {
 	for i := uint64(2); i <= m; i = i + 2 {
 
 		if ps[i] == 0 {
-			go fill(i, max, ready)
+			go fill(ps, i, max, ready)
 			ready <- true
 		}
 		if i == 2 {
