@@ -5,9 +5,7 @@ import (
 	"runtime"
 )
 
-var ps []uint64
-
-func fill(i uint64, max uint64, ready chan bool) {
+func fill(ps []uint64, i uint64, max uint64, ready chan bool) {
 	a := 2 * i
 	for a <= max {
 		ps[a] = 1
@@ -20,7 +18,7 @@ func Primes(max uint64) []uint64 {
 	runtime.GOMAXPROCS(runtime.NumCPU())
 	ready := make(chan bool, runtime.NumCPU())
 
-	ps = make([]uint64, max+1)
+	var ps = make([]uint64, max+1)
 	m := uint64(math.Sqrt(float64(max)))
 	for i := uint64(2); i <= m; i = i + 2 {
 
