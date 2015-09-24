@@ -1,3 +1,8 @@
 language: go
+go:
+  - tip
+before_install:
+  - go get golang.org/x/tools/cmd/cover
+  - go get github.com/mattn/goveralls
 script:
-  - time go test -v 'github.com/kavehmz/prime'
+    - go test -v -covermode=count -coverprofile=coverage.out
