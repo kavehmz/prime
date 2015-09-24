@@ -32,7 +32,7 @@ func TestFill(t *testing.T) {
 			c++
 		}
 	}
-	if c != 49 {
+	if c != 40 {
 		t.Error("Filled cells are wrong ", c)
 	}
 }
