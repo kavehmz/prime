@@ -9,6 +9,12 @@ func TestPrimes(t *testing.T) {
 	if len(p) != 78498 {
 		t.Error("Wrong number of prime numbers lower than 1M ", len(p))
 	}
+	if p[0] != uint64(2) {
+		t.Error("First prime number is not 2 ", p[0])
+	}
+	if p[23423] != uint64(2) {
+		t.Error("23424th prime number is not 267391 ", p[23423])
+	}
 	p = Primes(10)
 	if len(p) != 4 {
 		t.Error("Wrong number of prime numbers lower than 10 ", len(p))
