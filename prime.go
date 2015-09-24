@@ -44,7 +44,7 @@ func Primes(max uint64) []uint64 {
 	m = uint64(len(ps))
 	for i := uint64(2); i < uint64(len(ps)); i++ {
 		if ps[i] == 0 {
-			t = append(t, ps[i])
+			t = append(t, i)
 		}
 	}
 	return t
