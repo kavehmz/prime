@@ -5,12 +5,16 @@ import (
 	"runtime"
 )
 
-func fill(ps []uint64, i uint64, max uint64, ready chan bool) {
+func fill(ps []uint64, i uint64, max uint64) {
 	a := 2 * i
 	for a <= max {
 		ps[a] = 1
 		a = a + i
 	}
+}
+
+func go_fill(ps []uint64, i uint64, max uint64, ready chan bool) {
+	fill(ps, i, max)
 	<-ready
 }
 
@@ -23,7 +27,7 @@ func Primes(max uint64) []uint64 {
 	for i := uint64(2); i <= m; i = i + 2 {
 
 		if ps[i] == 0 {
-			go fill(ps, i, max, ready)
+			go go_fill(ps, i, max, ready)
 			ready <- true
 		}
 		if i == 2 {
