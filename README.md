@@ -1,4 +1,4 @@
-prime
+Prime
 =========
 [![Build Status](https://travis-ci.org/kavehmz/prime.svg)](https://travis-ci.org/kavehmz/prime)
 [![Coverage Status](https://coveralls.io/repos/kavehmz/prime/badge.svg?branch=master&service=github)](https://coveralls.io/github/kavehmz/prime?branch=master)
@@ -26,3 +26,8 @@ func main() {
 	fmt.Println("Number of primes:", len(p))
 }
 ```
+# Algorithm
+To find more about different methods to find a range of prime numbers you can look at following pages:
+
+* [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) This is a more memory demanding method but faster by far for larger numbers.
+* [Trial division](https://en.wikipedia.org/wiki/Trial_division) Easier to understand and less memory consuming.
