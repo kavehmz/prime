@@ -5,21 +5,21 @@ import (
 )
 
 func TestPrimes(t *testing.T) {
-	r := Primes(1000000)
-	if len(r) != 78498 {
-		t.Error("Wrong number of prime numbers lower than 1M ", len(r))
+	p := Primes(1000000)
+	if len(p) != 78498 {
+		t.Error("Wrong number of prime numbers lower than 1M ", len(p))
 	}
-	r = Primes(10)
-	if len(r) != 4 {
-		t.Error("Wrong number of prime numbers lower than 10 ", len(r))
+	p = Primes(10)
+	if len(p) != 4 {
+		t.Error("Wrong number of prime numbers lower than 10 ", len(p))
 	}
-	r = Primes(1)
-	if len(r) != 0 {
-		t.Error("Edge case of 1 not correct ", len(r))
+	p = Primes(1)
+	if len(p) != 0 {
+		t.Error("Edge case of 1 not correct ", len(p))
 	}
-	r = Primes(2)
-	if len(r) != 1 {
-		t.Error("Edge case of 2 not correct ", len(r))
+	p = Primes(2)
+	if len(p) != 1 {
+		t.Error("Edge case of 2 not correct ", len(p))
 	}
 }
 
