@@ -1,3 +1,3 @@
 language: go
 script:
-  - go test -v prime
+  - time go test -v 'github.com/kavehmz/prime'
