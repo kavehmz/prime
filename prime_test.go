@@ -39,15 +39,21 @@ func TestPrimes(t *testing.T) {
 }
 
 func TestFill(t *testing.T) {
-	p := make([]uint64, 101)
+	p := make([]bool, 101)
 	fill(p, 2, 100)
 	var c uint64
 	for _, v := range p {
-		if v == 1 {
+		if v == true {
 			c++
 		}
 	}
 	if c != 49 {
 		t.Error("Filled cells are wrong ", c)
+	}
+}
+
+func BenchmarkPrimes(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		Primes(1000000)
 	}
 }
