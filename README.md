@@ -48,3 +48,5 @@ x          |time
 1,000,000  |0.003s
 10,000,000 |0.081s
 100,000,000|1.292s
+
+This calculation is based on a Mac 3.1 GHz Intel Core i7.
