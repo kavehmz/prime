@@ -1,6 +1,7 @@
 package prime
 
 import (
+	"fmt"
 	"testing"
 )
 
@@ -54,4 +55,12 @@ func BenchmarkPrimes(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		Primes(1000000)
 	}
+}
+
+func ExamplePrimes() {
+	p := Primes(50)
+	fmt.Println(p)
+	// Output:
+	// [2 3 5 7 11 13 17 19 23 29 31 37 41 43 47]
+
 }
