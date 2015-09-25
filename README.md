@@ -50,3 +50,8 @@ x          |time
 100,000,000|1.292s
 
 These calculations are done on a Mac 3.1 GHz Intel Core i7.
+
+# Why
+I used this simple library mainly to learn about Go language and Go best standards.
+
+Also to use it for solving problems in https://projecteuler.net/
