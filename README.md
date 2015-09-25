@@ -31,3 +31,20 @@ To find more about different methods to find a range of prime numbers you can lo
 
 * [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) This is a more memory demanding method but faster by far for larger numbers.
 * [Trial division](https://en.wikipedia.org/wiki/Trial_division) Easier to understand and less memory consuming.
+
+# Performance
+Performance depends on the size of max number. But as an example, it needs about 14ms to produce the first 1,000,000 prime numbers.
+
+
+```bash
+$ go test -bench .  
+PASS
+BenchmarkPrimes-4	     100	  13428283 ns/op
+ok  	github.com/kavehmz/prime	1.390s
+```
+
+x          |time
+-----------|------
+1,000,000  |0.013s
+10,000,000 |0.190s
+100,000,000|2.475s
