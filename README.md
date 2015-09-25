@@ -49,4 +49,4 @@ x          |time
 10,000,000 |0.081s
 100,000,000|1.292s
 
-These calculations are based done on a Mac 3.1 GHz Intel Core i7.
+These calculations are done on a Mac 3.1 GHz Intel Core i7.
