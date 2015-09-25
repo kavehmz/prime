@@ -1,3 +1,10 @@
+// Package prime provides functionality to produce prime numbers using all
+// available cpu cores. https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes
+// can be an starting point to find more information about how to calculate
+// prime numbers.
+//
+// The method used in Primes function is more memory consuming than a simpler
+// Trial division method (https://en.wikipedia.org/wiki/Trial_division)
 package prime
 
 import (
@@ -18,7 +25,7 @@ func go_fill(nums []bool, i uint64, max uint64, ready chan bool) {
 	<-ready
 }
 
-// Primes returns slice of all prime numbers equal or lower than max.
+// Primes returns a slice of all prime numbers equal or lower than max.
 func Primes(max uint64) []uint64 {
 	runtime.GOMAXPROCS(runtime.NumCPU())
 	ready := make(chan bool, runtime.NumCPU())
