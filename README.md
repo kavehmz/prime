@@ -52,6 +52,6 @@ x          |time
 These calculations are done on a Mac 3.1 GHz Intel Core i7.
 
 # Why
-I used this simple library mainly to learn about Go language and Go best standards.
+I used this simple library mainly to learn about Go language and Go standards.
 
 Also to use it for solving problems in https://projecteuler.net/
