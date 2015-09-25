@@ -18,6 +18,7 @@ func go_fill(nums []bool, i uint64, max uint64, ready chan bool) {
 	<-ready
 }
 
+// Primes returns slice of all prime numbers equal or lower than max.
 func Primes(max uint64) []uint64 {
 	runtime.GOMAXPROCS(runtime.NumCPU())
 	ready := make(chan bool, runtime.NumCPU())

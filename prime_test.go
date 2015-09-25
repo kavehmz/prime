@@ -15,18 +15,16 @@ func TestPrimes(t *testing.T) {
 	if p[1] != uint64(3) {
 		t.Error("2nd prime number is not 3,", p[1])
 	}
-	if p[25] != uint64(101) {
-		t.Error("25th prime number is not 101,", p[25])
-	}
 	if p[23423] != uint64(267391) {
 		t.Error("23424th prime number is not 267391,", p[23423])
 	}
 	p = Primes(100)
-	if p[24] != uint64(97) {
-		t.Error("23424th prime number is not 97,", p[24])
-	}
 	if len(p) != 25 {
 		t.Error("Wrong number of prime numbers lower than 100,", len(p))
+	}
+	p = Primes(7)
+	if p[3] != uint64(7) {
+		t.Error("If max is 7 last prime must be 7, but it is", p[3])
 	}
 	p = Primes(1)
 	if len(p) != 0 {
