@@ -1,5 +1,6 @@
 Prime
 =========
+[![Go Lang](http://kavehmz.github.io/static/gopher/gopher-front.svg)](https://golang.org/)
 [![Build Status](https://travis-ci.org/kavehmz/prime.svg)](https://travis-ci.org/kavehmz/prime)
 [![Coverage Status](https://coveralls.io/repos/kavehmz/prime/badge.svg?branch=master&service=github)](https://coveralls.io/github/kavehmz/prime?branch=master)
 
