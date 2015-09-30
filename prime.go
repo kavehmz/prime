@@ -20,23 +20,23 @@ func fill(nums []bool, i uint64, max uint64) {
 	}
 }
 
-func go_fill(nums []bool, i uint64, max uint64, ready chan bool) {
+func go_fill(nums []bool, i uint64, max uint64, next chan bool) {
 	fill(nums, i, max)
-	<-ready
+	<-next
 }
 
 // Primes returns a slice of all prime numbers equal or lower than max.
 func Primes(max uint64) []uint64 {
 	runtime.GOMAXPROCS(runtime.NumCPU())
-	ready := make(chan bool, runtime.NumCPU())
+	next := make(chan bool, runtime.NumCPU())
 
 	var nums = make([]bool, max+1)
 	m := uint64(math.Sqrt(float64(max)))
 	for i := uint64(2); i <= m; i = i + 2 {
 
 		if nums[i] == false {
-			go go_fill(nums, i, max, ready)
-			ready <- true
+			go go_fill(nums, i, max, next)
+			next <- true
 		}
 		if i == 2 {
 			i = 1
@@ -45,7 +45,7 @@ func Primes(max uint64) []uint64 {
 	}
 
 	for i := 0; i < runtime.NumCPU(); i++ {
-		ready <- true
+		next <- true
 	}
 
 	var ps []uint64
