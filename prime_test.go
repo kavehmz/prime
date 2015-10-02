@@ -53,7 +53,7 @@ func TestFill(t *testing.T) {
 
 func BenchmarkPrimes(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		Primes(1000000)
+		Primes(10000000)
 	}
 }
 
