@@ -1,9 +1,9 @@
 Prime
 =========
 [![Go Lang](http://kavehmz.github.io/static/gopher/gopher-front.svg)](https://golang.org/)
+[![GoDoc](https://godoc.org/github.com/kavehmz/prime.v1?status.svg)](https://godoc.org/github.com/kavehmz/prime)
 [![Build Status](https://travis-ci.org/kavehmz/prime.svg)](https://travis-ci.org/kavehmz/prime)
 [![Coverage Status](https://coveralls.io/repos/kavehmz/prime/badge.svg?branch=master&service=github)](https://coveralls.io/github/kavehmz/prime?branch=master)
-[![GoDoc](https://godoc.org/github.com/kavehmz/prime.v1?status.svg)](https://godoc.org/github.com/kavehmz/prime)
 
 This is a [Go](http://golang.org) library to produce prime numbers using all available cpu cores.
 
