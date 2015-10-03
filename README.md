@@ -55,6 +55,6 @@ x          |time
 These calculations are done on a Mac 3.1 GHz Intel Core i7.
 
 # Why
-I used this simple library mainly to learn about Go language and Go standards. Also to use it for solving problems in https://projecteuler.net/
+I used this simple library mainly to learn Go language, Go standards and for solving problems in https://projecteuler.net/
 
-But I think it might be useful as a relatively fast implementation of prime numbers generator in Go.
+It can also be useful as a relatively fast implementation of prime numbers generator in Go.
