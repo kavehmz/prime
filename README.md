@@ -46,13 +46,14 @@ BenchmarkPrimes-4	     300	   3948274 ns/op
 ok  	github.com/kavehmz/prime	1.618s
 ```
 
-x          |time
------------|------
-1,000,000  |0.003s
-10,000,000 |0.081s
-100,000,000|1.292s
+x            |time
+-------------|------
+1,000,000    |0.003s
+10,000,000   |0.081s
+100,000,000  |1.292s
+1,000,000,000|13.86s
 
-These calculations are done on a Mac 3.1 GHz Intel Core i7.
+These calculations are done on a 3.1GHz Dual-core Intel Core i7.
 
 # Why
 I used this simple library mainly to learn Go language, Go standards and for solving problems in https://projecteuler.net/
