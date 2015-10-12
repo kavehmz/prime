@@ -4,6 +4,7 @@ Prime
 [![GoDoc](https://godoc.org/github.com/kavehmz/prime?status.svg)](https://godoc.org/github.com/kavehmz/prime)
 [![Build Status](https://travis-ci.org/kavehmz/prime.svg?branch=master)](https://travis-ci.org/kavehmz/prime)
 [![Coverage Status](https://coveralls.io/repos/kavehmz/prime/badge.svg?branch=master&service=github)](https://coveralls.io/github/kavehmz/prime?branch=master)
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/kavehmz/prime?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 This is a [Go](http://golang.org) library to produce prime numbers using all available cpu cores.
 
