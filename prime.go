@@ -39,9 +39,6 @@ func Primes(max uint64) []uint64 {
 			go goFill(nums, i, max, next)
 			next <- true
 		}
-		if i == 2 {
-			i = 1
-		}
 	}
 
 	for i := 0; i < cores; i++ {
