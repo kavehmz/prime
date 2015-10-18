@@ -43,7 +43,7 @@ Performance depends on the size of max number. But as an example, it needs about
 ```bash
 $ go test -bench .  
 PASS
-BenchmarkPrimes-4	     300	   3948274 ns/op
+BenchmarkPrimes-4	     500	   3181972 ns/op
 ok  	github.com/kavehmz/prime	1.618s
 ```
 
