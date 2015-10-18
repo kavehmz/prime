@@ -13,10 +13,10 @@ import (
 )
 
 func fill(nums []bool, i uint64, max uint64) {
-	a := 2 * i
+	a := 3 * i
 	for a <= max {
-		nums[a] = true
-		a = a + i
+		nums[a/2] = true
+		a = a + 2*i
 	}
 }
 
@@ -31,11 +31,11 @@ func Primes(max uint64) []uint64 {
 	runtime.GOMAXPROCS(cores)
 	next := make(chan bool, cores)
 
-	var nums = make([]bool, max+1)
+	var nums = make([]bool, max/2+1)
 	m := uint64(math.Sqrt(float64(max)))
 
-	for i := uint64(2); i <= m; i = i + 2 {
-		if nums[i] == false {
+	for i := uint64(3); i <= m; i = i + 2 {
+		if nums[i/2] == false {
 			go goFill(nums, i, max, next)
 			next <- true
 		}
@@ -49,8 +49,11 @@ func Primes(max uint64) []uint64 {
 	}
 
 	var ps []uint64
-	for i := uint64(2); i <= max; i++ {
-		if nums[i] == false {
+	if max >= 2 {
+		ps = append(ps, 2)
+	}
+	for i := uint64(3); i <= max; i = i + 2 {
+		if nums[i/2] == false {
 			ps = append(ps, i)
 		}
 	}

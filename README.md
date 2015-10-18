@@ -50,9 +50,9 @@ ok  	github.com/kavehmz/prime	1.618s
 x            |time
 -------------|------
 1,000,000    |0.003s
-10,000,000   |0.081s
-100,000,000  |1.292s
-1,000,000,000|13.86s
+10,000,000   |0.035s
+100,000,000  |0.642s
+1,000,000,000|8.253s
 
 These calculations are done on a 3.1GHz Dual-core Intel Core i7.
 

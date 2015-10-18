@@ -39,14 +39,14 @@ func TestPrimes(t *testing.T) {
 
 func TestFill(t *testing.T) {
 	p := make([]bool, 101)
-	fill(p, 2, 100)
+	fill(p, 3, 100)
 	var c uint64
 	for _, v := range p {
 		if v == true {
 			c++
 		}
 	}
-	if c != 49 {
+	if c != 16 {
 		t.Error("Filled cells are wrong ", c)
 	}
 }
