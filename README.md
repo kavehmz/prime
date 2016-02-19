@@ -34,7 +34,7 @@ func main() {
 # Algorithm
 To find more about different methods to find a range of prime numbers you can look at following pages:
 
-* [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) This is a more memory demanding method but faster by far for larger numbers.
+* [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) This is a more memory demanding method but faster by far for larger numbers. Here I have implemented both Segmented and non-Segmented methods. Segmented method had must less memory footprint.
 * [Trial division](https://en.wikipedia.org/wiki/Trial_division) Easier to understand and less memory consuming.
 
 # Performance
@@ -48,12 +48,12 @@ BenchmarkPrimes-4	     500	   3181972 ns/op
 ok  	github.com/kavehmz/prime	1.618s
 ```
 
-x            |time
--------------|------
-1,000,000    |0.003s
-10,000,000   |0.035s
-100,000,000  |0.642s
-1,000,000,000|8.253s
+x            |no segment |segmented
+-------------|-----------|------
+1,000,000    |0.003s     | 0.007s
+10,000,000   |0.035s     | 0.044s
+100,000,000  |0.642s     | 0.345s
+1,000,000,000|8.253s     | 3.146s
 
 These calculations are done on a 3.1GHz Dual-core Intel Core i7.
 
