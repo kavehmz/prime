@@ -66,7 +66,7 @@ First go and get the package
 $ go get github.com/kavehmz/prime
 $ cd $GOPATH/src/github.com/kavehmz/prime
 $ go build example/main.go
-$ go run example/main.go -cpuprofile=prime.prof  -memprofile=prime.mprof
+$ ./main -cpuprofile=prime.prof  -memprofile=prime.mprof
 $ # For inspecting memory usage do
 $ go tool pprof main prime.mprof
 $ # For inspecting cpu usage do
