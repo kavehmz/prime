@@ -81,10 +81,11 @@ func fillSegments(n uint64, basePrimes []uint64, allPrimes *[]uint64, segSize ui
 			*allPrimes = append(*allPrimes, segSize*segNum+i+1)
 		}
 	}
+
+	<-next
 	if int(segNum)+1 < len(nextTurn) {
 		nextTurn[segNum+1] <- true
 	}
-	<-next
 
 }
 
