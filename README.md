@@ -57,6 +57,28 @@ x            |no segment |segmented
 
 These calculations are done on a 3.1GHz Dual-core Intel Core i7.
 
+# Profiling
+
+If you like to see how profiling in Go works and you have a usage Go installation you can use pprof.
+
+First go and get the package
+
+```bash
+$ go get github.com/kavehmz/prime
+$ cd $GOPATH/src/github.com/kavehmz/prime
+$ go build example/main.go
+$ go run example/main.go -cpuprofile=prime.prof  -memprofile=prime.mprof
+$ # For inspecting memory usage do
+$ go tool pprof main prime.mprof
+$ # For inspecting cpu usage do
+$ go tool pprof main prime.prof
+
+Entering interactive mode (type "help" for commands)
+(pprof) list
+```
+
+
+
 # Why
 I used this simple library mainly to learn Go language, Go standards and for solving problems in https://projecteuler.net/
 
