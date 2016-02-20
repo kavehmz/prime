@@ -62,7 +62,6 @@ These calculations are done on a 3.1GHz Dual-core Intel Core i7.
 If you like to see how profiling in Go works and you have a usage Go installation you can use pprof.
 
 First go and get the package
-
 ```bash
 $ go get github.com/kavehmz/prime
 $ cd $GOPATH/src/github.com/kavehmz/prime
@@ -77,7 +76,10 @@ Entering interactive mode (type "help" for commands)
 (pprof) list
 ```
 
+To learn how you have use pprof look at the following links:
 
+- http://blog.golang.org/profiling-go-programs
+- https://golang.org/pkg/net/http/pprof/
 
 # Why
 I used this simple library mainly to learn Go language, Go standards and for solving problems in https://projecteuler.net/
