@@ -105,7 +105,6 @@ func Primes(n uint64) (allPrimes []uint64) {
 	allPrimes = append(allPrimes, basePrimes...)
 
 	cores := runtime.NumCPU()
-	runtime.GOMAXPROCS(cores)
 	next := make(chan bool, cores)
 	var nextTurn []chan bool
 	nextTurn = make([]chan bool, n/segSize+1)
