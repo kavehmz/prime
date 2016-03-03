@@ -30,7 +30,6 @@ func goFill(nums []bool, i uint64, max uint64, next chan bool) {
 // This is without segmenting.
 func SieveOfEratosthenes(n uint64) []uint64 {
 	cores := runtime.NumCPU()
-	runtime.GOMAXPROCS(cores)
 	next := make(chan bool, cores)
 
 	var nums = make([]bool, n/2+1)
