@@ -11,6 +11,7 @@ package prime
 import (
 	"math"
 	"runtime"
+	"sync"
 )
 
 func fill(nums []bool, i uint64, max uint64) {
@@ -58,8 +59,13 @@ func SieveOfEratosthenes(n uint64) []uint64 {
 	return ps
 }
 
+var csegPool sync.Pool
+
 func fillSegments(n uint64, basePrimes []uint64, allPrimes *[]uint64, segSize uint64, segNum uint64, next chan bool, nextTurn []chan bool) {
-	cseg := make([]bool, segSize)
+	cseg := (csegPool.Get()).([]bool)
+	for i := uint64(0); i < segSize; i++ {
+		cseg[i] = false
+	}
 	for i := 0; i < len(basePrimes); i++ {
 		jMax := segSize * (segNum + 1) / basePrimes[i]
 		for j := (segSize * segNum) / basePrimes[i]; j < jMax; j++ {
@@ -86,6 +92,7 @@ func fillSegments(n uint64, basePrimes []uint64, allPrimes *[]uint64, segSize ui
 		nextTurn[segNum+1] <- true
 	}
 
+	csegPool.Put(cseg)
 }
 
 // Primes is using Segmented sieve. This method will reduce memory usae of Sieve of Eratosthenes considerably.
@@ -99,6 +106,10 @@ func Primes(n uint64) (allPrimes []uint64) {
 	// There is a function pi(x) in math that will returns approximate number of prime numbers below n.
 	allPrimes = make([]uint64, 0, n/uint64(math.Log(float64(n))-1))
 	segSize := uint64(math.Sqrt(float64(n)))
+
+	csegPool.New = func() interface{} {
+		return make([]bool, segSize)
+	}
 
 	basePrimes := SieveOfEratosthenes(segSize)
 	allPrimes = append(allPrimes, basePrimes...)
