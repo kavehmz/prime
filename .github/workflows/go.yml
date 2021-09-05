@@ -22,4 +22,10 @@ jobs:
       run: go build -v ./...
 
     - name: Test
-      run: go test -v ./...
+      run: go test -v -coverprofile=lcov.info ./...
+
+    - name: Coveralls
+      uses: coverallsapp/github-action@master
+      with:
+        path-to-profile: lcov.info
+        github-token: ${{ secrets.GITHUB_TOKEN }}
