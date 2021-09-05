@@ -2,7 +2,7 @@ Prime
 =========
 [![Go Lang](http://kavehmz.github.io/static/gopher/gopher-front.svg)](https://golang.org/)
 [![GoDoc](https://godoc.org/github.com/kavehmz/prime?status.svg)](https://godoc.org/github.com/kavehmz/prime)
-[![Build Status](https://travis-ci.org/kavehmz/prime.svg?branch=master)](https://travis-ci.org/kavehmz/prime)
+![Build Status](https://github.com/kavehmz/prime/actions/workflows/go.yml/badge.svg?branch=master)
 [![Coverage Status](https://coveralls.io/repos/kavehmz/prime/badge.svg?branch=master&service=github)](https://coveralls.io/github/kavehmz/prime?branch=master)
 [![Go Report Card](https://goreportcard.com/badge/github.com/kavehmz/prime)](https://goreportcard.com/report/github.com/kavehmz/prime)
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/kavehmz/prime)
